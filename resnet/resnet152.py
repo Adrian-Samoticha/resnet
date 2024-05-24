@@ -18,7 +18,7 @@ from __future__ import absolute_import
 from keras.layers import (
     Input, Dense, Conv2D, MaxPooling2D, AveragePooling2D, GlobalMaxPooling2D,
     GlobalAveragePooling2D, ZeroPadding2D, Flatten, Activation, add)
-from keras.layers.normalization import BatchNormalization
+from keras.layers import BatchNormalization
 from keras.models import Model
 from keras import initializers
 from keras.engine import Layer, InputSpec
