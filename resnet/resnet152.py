@@ -15,24 +15,31 @@ Implementation is based on Keras 2.0
 from __future__ import print_function
 from __future__ import absolute_import
 
-from keras.layers import (
+from keras.src.layers import (
     Input, Dense, Conv2D, MaxPooling2D, AveragePooling2D, GlobalMaxPooling2D,
-    GlobalAveragePooling2D, ZeroPadding2D, Flatten, Activation, add)
-from keras.layers import BatchNormalization
-from keras.models import Model
-from keras import initializers
-# from keras.engine import Layer, InputSpec
-from keras import layers
-# from keras.engine.topology import get_source_inputs
-from keras.utils import get_source_inputs
-from keras import backend as K
-# from keras.applications.imagenet_utils import _obtain_input_shape
-from keras import applications
-from keras_applications.imagenet_utils import _obtain_input_shape
-from keras.utils.data_utils import get_file
+    GlobalAveragePooling2D, ZeroPadding2D, Flatten, Activation, add, BatchNormalization)
+# from keras.layers import BatchNormalization
+# from keras.models import Model
+# from keras import initializers
+# # from keras.engine import Layer, InputSpec
+# from keras import layers
+# # from keras.engine.topology import get_source_inputs
+# from keras.utils import get_source_inputs
+from keras import backend as K, Model
+# # from keras.applications.imagenet_utils import _obtain_input_shape
+# from keras import applications
+# from keras_applications.imagenet_utils import _obtain_input_shape
+# from keras.utils.data_utils import get_file
 
 import warnings
 import sys
+
+from keras import Layer, InputSpec
+from keras.api import initializers
+from keras.src.ops.operation_utils import get_source_inputs
+from keras.src.utils import get_file
+from keras_applications.imagenet_utils import _obtain_input_shape
+
 sys.setrecursionlimit(3000)
 
 
